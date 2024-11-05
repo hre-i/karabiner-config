@@ -1,0 +1,205 @@
+{
+    "title": "RCmd を Fn として使う",
+    "rules": [
+        {
+            "description": "RCmd + hjkl -> Cursor",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": { "key_code": "h", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "left_arrow" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "j", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "down_arrow" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "k", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "up_arrow" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "l", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "right_arrow" } ]
+                }
+            ]
+        },
+        {
+            "description": "RCmd + io -> PageUp/PageDn",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": { "key_code": "i", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "page_up" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "o", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "page_down" } ]
+                }
+            ]
+        },
+        {
+            "description": "RCmd + comma/period -> Home/End",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": { "key_code": "comma", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "home" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "period", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "end" } ]
+                }
+            ]
+        },
+        {
+            "description": "RCmd + m -> DeleteForward",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": { "key_code": "m", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "delete_or_backspace" } ]
+                }
+            ]
+        },
+        {
+            "description": "RCmd + A/W/S/E/D/R/F/T/G/Z/X/C/V/B/N -> アプリケーション・ランチャ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": { "key_code": "a", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "shell_command": "open -a 'finder'" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "w", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "shell_command": "~/.config/karabiner/app/do-w" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "s", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "shell_command": "~/.config/karabiner/app/do-s" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "e", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "shell_command": "~/.config/karabiner/app/do-e" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "d", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "shell_command": "~/.config/karabiner/app/do-d" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "r", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "shell_command": "~/.config/karabiner/app/do-r" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "f", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "shell_command": "~/.config/karabiner/app/do-f" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "t", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "shell_command": "~/.config/karabiner/app/do-t" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "g", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "shell_command": "~/.config/karabiner/app/do-g" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "z", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "shell_command": "~/.config/karabiner/app/do-z" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "x", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "shell_command": "~/.config/karabiner/app/do-x" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "c", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "shell_command": "~/.config/karabiner/app/do-c" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "v", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "shell_command": "~/.config/karabiner/app/do-v" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "b", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "shell_command": "~/.config/karabiner/app/do-b" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "n", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "shell_command": "~/.config/karabiner/app/do-n" } ]
+                }
+            ]
+        },
+        {
+            "description": "RCmd + 1234567890 -> Functions",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": { "key_code": "1", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "f1" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "2", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "f2" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "3", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "f3" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "4", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "f4" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "5", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "f5" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "6", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "f6" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "7", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "f7" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "8", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "f8" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "9", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "f9" } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "0", "modifiers": { "mandatory": [ "right_command" ], "optional": [ "any" ] } },
+                    "to": [ { "key_code": "f10" } ]
+                }
+            ]
+        }
+    ]
+}

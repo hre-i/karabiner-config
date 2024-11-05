@@ -1,0 +1,100 @@
+{
+    "title": "IME 関連",
+    "rules": [
+        {
+            "description": "Control+J to KANA",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "j",
+                        "modifiers": {
+                            "mandatory": [ "control" ]
+                        }
+                    },
+                    "to": [ { "key_code": "japanese_kana" } ]
+                }
+            ]
+        },
+        {
+            "description": "Control+L to EISU",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": [ "control" ]
+                        }
+                    },
+                    "to": [ { "key_code": "japanese_eisuu" } ]
+                }
+            ]
+        },
+        {
+            "description": "Control+J to KANA if english mode",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "conditions": [ { "input_sources": [ { "language": "en" } ], "type": "input_source_if" } ],
+                    "from": {
+                        "key_code": "j",
+                        "modifiers": {
+                            "mandatory": [ "control" ]
+                        }
+                    },
+                    "to": [ { "key_code": "japanese_kana" } ]
+                }
+            ]
+        },
+        {
+            "description": "Control+L to EISU if japanese mode",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "conditions": [ { "input_sources": [ { "language": "ja" } ], "type": "input_source_if" } ],
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": [ "control" ]
+                        }
+                    },
+                    "to": [ { "key_code": "japanese_eisuu" } ]
+                }
+            ]
+        },
+        {
+            "description": "Escape to EISU and Escape",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "escape"
+                    },
+                    "to": [
+                        { "key_code": "japanese_eisuu" },
+                        { "key_code": "escape" }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Control+[ to EISU and Escape",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "open_bracket",
+                        "modifiers": {
+                            "mandatory": [ "control" ]
+                        }
+                    },
+                    "to": [
+                        { "key_code": "japanese_eisuu" },
+                        { "key_code": "escape" }
+                    ]
+                }
+            ]
+        }
+    ]
+}

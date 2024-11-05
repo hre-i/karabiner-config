@@ -1,0 +1,35 @@
+{
+    "title": "Control 関連",
+    "rules": [
+        {
+            "description": "Control+H to DeleteBackspace",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": { "key_code": "h", "modifiers": { "mandatory": [ "control" ] } },
+                    "to": [ { "key_code": "delete_or_backspace" } ]
+                }
+            ]
+        },
+        {
+            "description": "Control+M to Return",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": { "key_code": "m", "modifiers": { "mandatory": [ "control" ] } },
+                    "to": [ { "key_code": "return" } ]
+                }
+            ]
+        },
+        {
+            "description": "Control+M to Enter",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": { "key_code": "m", "modifiers": { "mandatory": [ "control" ] } },
+                    "to": [ { "key_code": "enter" } ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "title": "Command キー変換関連",
+    "rules": [
+        {
+            "description": "左-Command を単体で押したときに，Escape を送信",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": { "key_code": "left_command", "modifiers": { "optional": [ "any" ] } },
+                    "parameters": { "basic.to_if_held_down_threshold_milliseconds": 100 },
+                    "to": [ { "key_code": "left_command", "lazy": true } ],
+                    "to_if_held_down": [ { "key_code": "left_command" } ],
+                    "to_if_alone": [ { "key_code": "escape" } ]
+                }
+            ]
+        },
+        {
+            "description": "右-Command を単体で押したときに，Escape を送信",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": { "key_code": "right_command", "modifiers": { "optional": [ "any" ] } },
+                    "parameters": { "basic.to_if_held_down_threshold_milliseconds": 100 },
+                    "to": [ { "key_code": "right_command", "lazy": true } ],
+                    "to_if_held_down": [ { "key_code": "right_command" } ],
+                    "to_if_alone": [ { "key_code": "escape" } ]
+                }
+            ]
+        }
+    ]
+}

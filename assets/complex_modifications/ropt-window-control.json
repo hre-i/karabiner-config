@@ -1,0 +1,40 @@
+{
+    "title": "ROpt でウィンドウ操作関連",
+    "rules": [
+        {
+            "description": "ROpt+M でウインドウを隠す（command m -> command h）",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": { "key_code": "m", "modifiers": { "mandatory": [ "right_option" ] } },
+                    "to": [ { "key_code": "h", "modifiers": [ "command" ] } ]
+                }
+            ]
+        },
+        {
+            "description": "ROpt+J/K -> command+tab/command+shift+tab",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": { "key_code": "j", "modifiers": { "mandatory": [ "right_option" ] } },
+                    "to": [ { "key_code": "tab", "modifiers": [ "command" ] } ]
+                },
+                {
+                    "type": "basic",
+                    "from": { "key_code": "k", "modifiers": { "mandatory": [ "right_option" ] } },
+                    "to": [ { "key_code": "tab", "modifiers": [ "command", "shift" ] } ]
+                }
+            ]
+        },
+        {
+            "description": "ROpt+L -> command+`",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": { "key_code": "l", "modifiers": { "mandatory": [ "right_option" ] } },
+                    "to": [ { "key_code": "grave_accent_and_tilde", "modifiers": [ "command" ] } ]
+                }
+            ]
+        }
+    ]
+}
