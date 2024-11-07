@@ -1,12 +1,12 @@
 {
-    "title": "Right Shift 関連",
+    "title": "Modifiers 変換",
     "rules": [
         {
-            "description": "Change right_shift to command+option.",
+            "description": "international1(\\_) -> command+option.",
             "manipulators": [
                 {
                     "from": {
-                        "key_code": "right_shift",
+                        "key_code": "international1",
                         "modifiers": {
                             "optional": [
                                 "any"
