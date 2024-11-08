@@ -819,7 +819,7 @@
                         },
                         {
                             "from": { "key_code": "tab" },
-                            "to": [{ "key_code": "japanese_kana" }]
+                            "to": [{ "key_code": "fn" }]
                         }
                     ]
                 },
