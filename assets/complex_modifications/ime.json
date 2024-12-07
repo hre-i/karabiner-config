@@ -32,11 +32,20 @@
             ]
         },
         {
-            "description": "Control+J to KANA if english mode",
+            "description": "Control+J to KANA if english mode and parallels",
             "manipulators": [
                 {
                     "type": "basic",
-                    "conditions": [ { "input_sources": [ { "language": "en" } ], "type": "input_source_if" } ],
+                    "conditions": [
+                        {
+                            "input_sources": [ { "language": "en" } ],
+                            "type": "input_source_if"
+                        },
+                        {
+                            "bundle_identifiers": [ "^com\\.parallels\\..*" ],
+                            "type": "frontmost_application_unless"
+                        }
+                    ],
                     "from": {
                         "key_code": "j",
                         "modifiers": {
@@ -48,11 +57,20 @@
             ]
         },
         {
-            "description": "Control+L to EISU if japanese mode",
+            "description": "Control+L to EISU if japanese mode and parallels",
             "manipulators": [
                 {
                     "type": "basic",
-                    "conditions": [ { "input_sources": [ { "language": "ja" } ], "type": "input_source_if" } ],
+                    "conditions": [
+                        {
+                            "input_sources": [ { "language": "ja" } ],
+                            "type": "input_source_if"
+                        },
+                        {
+                            "bundle_identifiers": [ "^com\\.parallels\\..*" ],
+                            "type": "frontmost_application_unless"
+                        }
+                    ],
                     "from": {
                         "key_code": "l",
                         "modifiers": {
