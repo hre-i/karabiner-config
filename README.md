@@ -20,4 +20,4 @@ Karabiner-Elements 設定ファイル
 ## インストール
 
     mkdir -p ~/.config
-    git checkout https://github.com/hre-i/karabiner-config.git ~/.config/karabiner
+    git clone ssh://hre-i@github.com/hre-i/karabiner-config.git ~/.config/karabiner
