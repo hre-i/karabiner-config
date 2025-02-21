@@ -1,0 +1,29 @@
+{
+    "title": "Right Shift 関連",
+    "rules": [
+        {
+            "description": "Change right_shift to command+option.",
+            "manipulators": [
+                {
+                    "from": {
+                        "key_code": "right_shift",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_command",
+                            "modifiers": [
+                                "left_option"
+                            ]
+                        }
+                    ],
+                    "type": "basic"
+                }
+            ]
+        }
+    ]
+}
